@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ccicedeltaapp-dev-145728-authRole",
+      "UnauthRoleArn": "arn:aws:iam::723741377789:role/amplify-ccicedeltaapp-dev-145728-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::723741377789:role/amplify-ccicedeltaapp-dev-145728-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-ccicedeltaapp-dev-145728-deployment",
+      "UnauthRoleName": "amplify-ccicedeltaapp-dev-145728-unauthRole",
+      "StackName": "amplify-ccicedeltaapp-dev-145728",
+      "StackId": "arn:aws:cloudformation:us-west-2:723741377789:stack/amplify-ccicedeltaapp-dev-145728/a6a257d0-2b96-11ee-a631-029b51be5897",
+      "AmplifyAppId": "d3cwz8y57lsfd6"
+    },
+    "categories": {
+      "auth": {
+        "ccicedeltaapp2f27d02c": {}
+      }
+    }
+  }
+}

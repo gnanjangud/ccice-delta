@@ -1,0 +1,230 @@
+{
+    "itinerary": {
+        "itineraryOffers": [
+            {
+                "itineraryOfferId": "20230718220932",
+                "customerId": "10001",
+                "itineraryOfferUpdateDatetime": "20230718220932",
+                "flight": {
+                    "passengers": [
+                        {
+                            "firstName": "Girish",
+                            "lastName": "Nanjangud",
+                            "dateOfBirth": "1985-09-22",
+                            "email": "girish.nanjangud@delta.com",
+                            "passengerNumber": "1"
+                        }
+                    ],
+                    "flightLegs": [
+                        {
+                            "departureAirport": "MSP",
+                            "departureDateTime": "2023-10-11 23:20:00",
+                            "arrivalDateTime": "2023-10-11 20:10:00",
+                            "flightLegNumber": "1",
+                            "itemNumber": "1",
+                            "arrivalAirport": "ATL"
+                        },
+                        {
+                            "departureAirport": "ATL",
+                            "departureDateTime": "2023-10-12 23:20:00",
+                            "arrivalDateTime": "2023-10-12 20:10:00",
+                            "flightLegNumber": "2",
+                            "itemNumber": "2",
+                            "arrivalAirport": "MSP"
+                        }
+                    ]
+                },
+                "groundTransportation": {
+                    "carRentals": [
+                        {
+                            "carRentalOfferId": "1921",
+                            "serviceProvider": "Hertz",
+                            "pickUpDateTime": "2023-10-11 20:10:00",
+                            "pickUpLocation": "Airport Minneapolis",
+                            "dropOffDateTime": "Airport 2023-10-12 23:20:00",
+                            "dropOffLOcation": "Minneapolis",
+                            "itemNumber": "3",
+                            "carRentalNumber": "1",
+                            "driver": {
+                                "firstName":"Girish",
+                                "lastName":"Nanjangud",
+                                "dateOfBirth":"1985-09-22",
+                                "licenceNumber": "22726234",
+                                "licenseExpiryDate": "2027-07-19"
+                            }
+                        }
+                    ],
+                    "cabServices": [
+                        {
+                            "cabServicesOfferId": "62422",
+                            "serviceProvider": "Lyft",
+                            "pickUpDateTime": "2023-10-11 21:20:00",
+                            "pickUpLocation": "Merita GA 30354",
+                            "dropOffDateTime": "2023-10-11 21:50:00",
+                            "dropOffLOcation": "Harsonfield Airpot Atlanta GA 30354",
+                            "itemNumber": "4",
+                            "cabServiceNumber": "1",
+                            "customer": {
+                                "firstName": "Girish",
+                                "lastName": "Nanjangud",
+                                "dateOfBirth": "1985-09-22"
+                            }
+                        },
+                        {
+                            "cabServicesOfferId": "829234",
+                            "serviceProvider": "Uber",
+                            "pickUpDateTime": "2023-10-12 21:20:00",
+                            "pickUpLocation": "Harsonfield Airpot Atlanta GA 30354",
+                            "dropOffDateTime": "2023-10-12 21:50:00",
+                            "dropOffLocation": "Merita GA 30354",
+                            "itemNumber": "5",
+                            "cabServiceNumber": "2",
+                            "customer": {
+                                "firstName": "Girish",
+                                "lastName": "Nanjangud",
+                                "dateOfBirth": "1985-09-22"
+                            }
+                        }
+                    ]
+                },
+                "accomodation": {
+                    "hotels": [
+                        {
+                            "hotelOfferId": "724212",
+                            "hotelName": "Marriot Courtyard",
+                            "checkInDateTime": "2023-10-11 15:00:00",
+                            "hotelAddress": "Harsonfield Airport South Atlanta 30354",
+                            "checkOutDateTime": "2023-10-11 11:00:00",
+                            "itemNumber": "6",
+                            "hotelNumber": "1",
+                            "customers": [
+                                {
+                                    "firstName": "Girish",
+                                    "lastName": "Nanjangud",
+                                    "dateOfBirth": "1985-09-22"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "activites": {
+                    "lunch": {
+                        "lunchOfferId": "2836723",
+                        "restrauntName": "Olive Garden",
+                        "restrauntAddress": "2847 Park Way Street Johns Creek Atlanta 30387",
+                        "lunchDateTime": "2023-10-11 12:30:00",
+                        "type": "Business",
+                        "numberOfGuest": "2",
+                        "itemNumber": "7"
+                    }
+                },
+                "prices": [
+                    {
+                        "fare": "180",
+                        "total": "240",
+                        "priceLineNumber": "1",
+                        "priceItemNumber": "1",
+                        "currency": "USD",
+                        "tax": "60"
+                    },
+                    {
+                        "fare": "180",
+                        "total": "240",
+                        "priceLineNumber": "2",
+                        "priceItemNumber": "2",
+                        "currency": "USD",
+                        "tax": "60"
+                    },
+                    {
+                        "fare": "180",
+                        "total": "240",
+                        "priceLineNumber": "3",
+                        "priceItemNumber": "3",
+                        "currency": "USD",
+                        "tax": "60"
+                    },
+                    {
+                        "fare": "180",
+                        "total": "240",
+                        "priceLineNumber": "4",
+                        "priceItemNumber": "4",
+                        "currency": "USD",
+                        "tax": "60"
+                    },
+                    {
+                        "fare": "180",
+                        "total": "240",
+                        "priceLineNumber": "5",
+                        "priceItemNumber": "5",
+                        "currency": "USD",
+                        "tax": "60"
+                    },
+                    {
+                        "fare": "180",
+                        "total": "240",
+                        "priceLineNumber": "6",
+                        "priceItemNumber": "6",
+                        "currency": "USD",
+                        "tax": "60"
+                    },
+                    {
+                        "fare": "180",
+                        "total": "240",
+                        "priceLineNumber": "7",
+                        "priceItemNumber": "7",
+                        "currency": "USD",
+                        "tax": "60"
+                    }
+                ],
+                "retrieveOperationMessage": null
+            },
+            {
+                "itineraryOfferId": "20230718220931",
+                "customerId": "10001",
+                "itineraryOfferUpdateDatetime": "20230718220931",
+                "flight": {
+                    "flightLegs": [
+                        {
+                            "departureAirport": "ATL",
+                            "departureDateTime": "2023-10-11 10:05:00",
+                            "arrivalDateTime": "2023-10-11 12:05:00",
+                            "flightLegNumber": "1",
+                            "itemNumber": "1",
+                            "arrivalAirport": "MSP"
+                        }
+                    ],
+                    "passengers": [
+                        {
+                            "firstName": "Girish",
+                            "lastName": "Nanjangud",
+                            "dateOfBirth": "1985-09-22",
+                            "passengerNumber": "1",
+                            "email": "girish.nanjangud@delta.com"
+                        }
+                    ]
+                },
+                "groundTransportation": {
+
+                },
+                "hotels": {
+
+                },
+                "activites": {
+
+                },
+                "prices": [
+                    {
+                        "fare": "150",
+                        "total": "200",
+                        "priceLineNumber": "1",
+                        "priceItemNumber": "1",
+                        "currency": "USD",
+                        "tax": "50"
+                    }
+                ],
+                "retrieveOperationMessage": null
+            }
+        ]
+    },
+    "requestId": "68685b3c-ca16-4728-b337-e8b51e2ed822"
+}

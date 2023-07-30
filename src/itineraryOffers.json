@@ -1,0 +1,91 @@
+{
+    "itinerary": {
+        "itineraryOffers": [
+            {
+                "itineraryOfferId": "20230718220932",
+                "customerId": "10001",
+                "itineraryOfferUpdateDatetime": "20230718220932",
+                "flightLegs": [
+                    {
+                        "departureAirport": "MSP",
+                        "departureDateTime": "2023-10-11 23:20:00",
+                        "arrivalDateTime": "2023-10-11 20:10:00",
+                        "flightLegNumber": "1",
+                        "arrivalAirport": "ATL"
+                    }
+                ],
+                "passengers": [
+                    {
+                        "firstName": "Girish",
+                        "lastName": "Nanjangud",
+                        "dateOfBirth": "1985-09-22",
+                        "email": "girish.nanjangud@delta.com",
+                        "passengerNumber": "1"
+                    }
+                ],
+                "prices": [
+                    {
+                        "fare": "180",
+                        "total": "240",
+                        "priceLineNumber": "1",
+                        "priceItemNumber": "1",
+                        "currency": "USD",
+                        "tax": "60",
+                        "priceItemName": "flightLeg"
+                    },
+                    {
+                        "grossTotal": "240",
+                        "priceLineNumber": "0",
+                        "taxTotal": "60",
+                        "currency": "USD",
+                        "fareTotal": "180"
+                    }
+                ],
+                "retrieveOperationMessage": null
+            },
+            {
+                "itineraryOfferId": "20230718220931",
+                "customerId": "10001",
+                "itineraryOfferUpdateDatetime": "20230718220931",
+                "flightLegs": [
+                    {
+                        "departureAirport": "ATL",
+                        "departureDateTime": "2023-10-11 10:05:00",
+                        "arrivalDateTime": "2023-10-11 12:05:00",
+                        "flightLegNumber": "1",
+                        "arrivalAirport": "MSP"
+                    }
+                ],
+                "passengers": [
+                    {
+                        "firstName": "Girish",
+                        "lastName": "Nanjangud",
+                        "dateOfBirth": "1985-09-22",
+                        "passengerNumber": "1",
+                        "email": "girish.nanjangud@delta.com"
+                    }
+                ],
+                "prices": [
+                    {
+                        "fare": "150",
+                        "total": "200",
+                        "priceLineNumber": "1",
+                        "priceItemNumber": "1",
+                        "currency": "USD",
+                        "tax": "50",
+                        "priceItemName": "flightLeg"
+                    },
+                    {
+                        "priceLineNumber": "0",
+                        "grossTotal": "200",
+                        "taxTotal": "50",
+                        "currency": "USD",
+                        "fareTotal": "150"
+                    }
+                ],
+                "retrieveOperationMessage": null
+            }
+        ]
+    },
+    "requestId": "68685b3c-ca16-4728-b337-e8b51e2ed822"
+}

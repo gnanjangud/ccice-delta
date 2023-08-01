@@ -1,0 +1,144 @@
+{
+    "itinerary": {
+        "itineraryOffers": [
+            {
+                "itineraryOfferId": "20230718220935",
+                "customerId": "10004",
+                "travellers": [
+                    {
+                        "firstName": "Girish",
+                        "lastName": "Nanjangud",
+                        "skyMilesNumber": "892347799",
+                        "service": {
+                            "accomodation": {
+                                "hotels": [
+                                    {
+                                        "classOfService": "Business",
+                                        "fare": "40",
+                                        "itemNumber": "6",
+                                        "checkOutDateTime": "2023-10-11 11:00:00",
+                                        "address": "Harsonfield Airport South Atlanta 30354",
+                                        "checkInDateTime": "2023-10-11 15:00:00",
+                                        "name": "Marriot Courtyard",
+                                        "currency": "USD",
+                                        "tax": "8",
+                                        "hotelId": "724212",
+                                        "class": "4 Star"
+                                    }
+                                ]
+                            },
+                            "activites": [
+                                {
+                                    "activityId": "2836723",
+                                    "classOfService": "Economy",
+                                    "fare": "50",
+                                    "itemNumber": "7",
+                                    "address": "2847 Park Way Street Johns Creek Atlanta 30387",
+                                    "name": "Atlanta Downtown",
+                                    "currency": "USD",
+                                    "startTime": "2023-10-11 12:30:00",
+                                    "subType": "Segway Tour",
+                                    "tax": "10",
+                                    "endTime": "2023-10-11 01:30:00",
+                                    "type": "City Tour"
+                                },
+                                {
+                                    "activityId": "2323464",
+                                    "classOfService": "Business",
+                                    "fare": "40",
+                                    "itemNumber": "8",
+                                    "address": "2822 Meriata Atlanta 30217",
+                                    "name": "Olive Garden",
+                                    "currency": "USD",
+                                    "startTime": "2023-10-11 12:30:00",
+                                    "subType": "Italian Cuisine",
+                                    "tax": "8",
+                                    "endTime": "2023-10-11 14:30:00",
+                                    "type": "Lunch"
+                                }
+                            ],
+                            "transportation": {
+                                "cabs": [
+                                    {
+                                        "dropOffLocation": "Harsonfield Airpot Atlanta GA 30354",
+                                        "classOfService": "Business",
+                                        "fare": "50",
+                                        "itemNumber": "4",
+                                        "serviceProvider": "Lyft",
+                                        "currency": "USD",
+                                        "dropOffDateTime": "2023-10-11 21:50:00",
+                                        "tax": "10",
+                                        "pickUpLocation": "Merita GA 30354",
+                                        "cabId": "62422",
+                                        "pickUpDateTime": "2023-10-11 21:20:00"
+                                    },
+                                    {
+                                        "dropOffLocation": "Merita GA 30354",
+                                        "classOfService": "Business",
+                                        "fare": "40",
+                                        "itemNumber": "5",
+                                        "serviceProvider": "Uber",
+                                        "currency": "USD",
+                                        "dropOffDateTime": "2023-10-12 21:50:00",
+                                        "tax": "8",
+                                        "pickUpLocation": "Harsonfield Airpot Atlanta GA 30354",
+                                        "cabId": "829234",
+                                        "pickUpDateTime": "2023-10-12 21:20:00"
+                                    }
+                                ],
+                                "carRentals": [
+                                    {
+                                        "dropOffLocation": "Minneapolis",
+                                        "classOfService": "Business",
+                                        "fare": "220",
+                                        "itemNumber": "3",
+                                        "serviceProvider": "Hertz",
+                                        "carRentalId": "1921",
+                                        "currency": "USD",
+                                        "dropOffDateTime": "Airport 2023-10-12 23:20:00",
+                                        "tax": "45",
+                                        "pickUpLocation": "Airport Minneapolis",
+                                        "pickUpDateTime": "2023-10-11 20:10:00"
+                                    }
+                                ],
+                                "flights": [
+                                    {
+                                        "classOfService": "Business",
+                                        "fare": "500",
+                                        "itemNumber": "1",
+                                        "departureAirport": "MSP",
+                                        "departureDateTime": "2023-10-11 23:20:00",
+                                        "flightId": "128423",
+                                        "currency": "USD",
+                                        "tax": "150",
+                                        "arrivalDateTime": "2023-10-11 20:10:00",
+                                        "arrivalAirport": "ATL",
+                                        "flightNumber": "DL2323"
+                                    },
+                                    {
+                                        "classOfService": "Business",
+                                        "fare": "500",
+                                        "itemNumber": "1",
+                                        "departureAirport": "ATL",
+                                        "departureDateTime": "2023-10-12 23:20:00",
+                                        "flightId": "12530",
+                                        "currency": "USD",
+                                        "tax": "150",
+                                        "arrivalDateTime": "2023-10-12 20:10:00",
+                                        "arrivalAirport": "MSP",
+                                        "flightNumber": "DL2932"
+                                    }
+                                ]
+                            }
+                        },
+                        "dateOfBirth": "1985-09-22",
+                        "email": "girish.nanjangud@delta.com"
+                    }
+                ],
+                "itineraryOfferUpdateDatetime": "20230718220935",
+                "retrieveOperationMessage": null
+            }
+        ]
+    },
+    "requestId": "8bbf9581-0415-4743-a97c-55b895219ce9"
+}

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 function App() {
 
-  const url = "https://w1zn5oqsa5.execute-api.us-west-2.amazonaws.com/dev/itineraryretrieve?retrieveByAttribute=customerId&id=10001&retrieveOperation=offer"; 
+  const url = "https://w1zn5oqsa5.execute-api.us-west-2.amazonaws.com/dev/itineraryretrieve?retrieveByAttribute=customerId&id=10004&retrieveOperation=offer"; 
   const [data, setData] = useState([]);
 
 

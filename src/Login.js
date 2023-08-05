@@ -10,7 +10,7 @@ export default function Login() {
 
   const [skyMilesNumber, setSkyMilesNumber] = useState("");
 
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("hello");
 
   function validateForm() {
     return skyMilesNumber.length > 0 && password.length > 0;
@@ -67,7 +67,7 @@ export default function Login() {
 
         </Form.Group>
 
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
+        <Button className="loginButton" block size="lg" type="submit" disabled={!validateForm()}>
 
           Login
 

@@ -39,10 +39,6 @@ function Customers() {
 
             <h2>Customers</h2>
 
-            <br></br>
-
-            <h2>Rendering {data.itinerary ? Object.keys(data.itinerary)[0].replace(/([a-z])([A-Z])/g, '$1 $2') : null}</h2>
-
             {
                 /*
                 data.itinerary ?
@@ -76,7 +72,9 @@ function Customers() {
                 
             }
 
-            <br></br>            
+            <br></br>    
+
+    {data.itinerary ?         
 
     <div>
     <table style={ {width: "100%" }}>
@@ -115,6 +113,7 @@ function Customers() {
 
       </table>
       </div>
+      : null }
 
             <br></br>
         </div>

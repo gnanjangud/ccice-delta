@@ -16,7 +16,7 @@ function CCICE() {
   const { customerId } = location.state
 
   const url = "https://w1zn5oqsa5.execute-api.us-west-2.amazonaws.com/dev/itineraryretrieve?retrieveByAttribute=customerId&id="
-        + customerId
+        + customerId 
         + "&retrieveOperation=offer";
   const [data, setData] = useState([]);
 
@@ -45,15 +45,19 @@ function CCICE() {
 
       <h2>Customer Centric Itinerary Creation Engine</h2>
 
-      <h2>Itinerary Offers</h2>
+      <br></br>
+
+      <h2>Rendering {data.itinerary ? Object.keys(data.itinerary)[0].replace(/([a-z])([A-Z])/g, '$1 $2') : null}</h2>
 
       <br></br>
-      
+
+      {data.itinerary ? 
+
       <div>
-            <table style={ {width: "100%" }}>
+            <table >
               <tr>
-                <th style={ {width: "15%" }}>Serial Number</th>
-                <th style={{ width: "20%" }}>Itinerary Offer ID</th>
+                <th>Serial Number</th>
+                <th>Itinerary Offer ID</th>
                 <th>Customer Id</th>
                 <th>Offered Date</th>
                 <th>Number of Travellers</th>
@@ -79,7 +83,8 @@ function CCICE() {
       }) : null}
 
       </table>
-      </div>
+      </div> 
+      : null }
 
       <br></br>
       <br></br>

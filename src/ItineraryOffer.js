@@ -40,19 +40,16 @@ function ItineraryOffer() {
 
         <div className="App">
 
-
-            <h3>{itineraryOfferId}</h3>
-
             <br></br>
 
             <h2>Customer Centric Itinerary Creation Engine</h2>
 
+            <br></br>
+
             <h2>Itinerary Offer</h2>
 
             <br></br>
-
-            <h2>Rendering {data.itinerary ? Object.keys(data.itinerary)[0].replace(/([a-z])([A-Z])/g, '$1 $2') : null}</h2>
-
+            
             {data.itinerary ?
 
 
@@ -60,7 +57,7 @@ function ItineraryOffer() {
                     <table>
                         <tr>
                             <th style={{ width: "20%" }}>Itinerary Attirbute Name</th>
-                            <th>Itinerary Attribute Name</th>
+                            <th>Itinerary Attribute Value</th>
                         </tr>
                         {data.itinerary ? Object.entries(data.itinerary.itineraryOffers[0]).map(([key, value]) => (
 

@@ -6,10 +6,11 @@ import {
   useLocation
 } from "react-router-dom";
 import "./Style.css";
+import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 
-function CCICE() {
+function CCICE({changeMessage}) {
 
 
   const location = useLocation()
@@ -34,6 +35,21 @@ function CCICE() {
   var i = 1;
 
 
+  function ClickHandler(event) {
+
+    event.preventDefault();
+
+    //alert(password);
+    //alert(skyMilesNumber);
+    changeMessage("Hello");    
+
+
+    navigate("/login");
+
+  }
+
+
+  const navigate = useNavigate();
 
 
   return (
@@ -47,6 +63,10 @@ function CCICE() {
 
       <br></br>
 
+      <h3>Hello&nbsp;{customerId}</h3>
+
+      <br></br>
+
       <h2>Rendering {data.itinerary ? Object.keys(data.itinerary)[0].replace(/([a-z])([A-Z])/g, '$1 $2') : null}</h2>
 
       <br></br>
@@ -54,7 +74,7 @@ function CCICE() {
       {data.itinerary ? 
 
       <div>
-            <table >
+            <table  >
               <tr>
                 <th>Serial Number</th>
                 <th>Itinerary Offer ID</th>
@@ -85,6 +105,8 @@ function CCICE() {
       </table>
       </div> 
       : null }
+
+      <button onClick={ClickHandler}>Logout</button>      
 
       <br></br>
       <br></br>

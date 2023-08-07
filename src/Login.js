@@ -4,7 +4,16 @@ import Form from "react-bootstrap/Form";
 
 import Button from "react-bootstrap/Button";
 
-export default function Login() {
+import {
+  useNavigate,
+  BrowserRouter,
+  Route,
+  Routes,
+  Link,
+  useLocation
+} from "react-router-dom";
+
+export default function Login({changeMessage}) {  
 
   const [email, setEmail] = useState("");
 
@@ -13,16 +22,31 @@ export default function Login() {
   const [password, setPassword] = useState("hello");
 
   function validateForm() {
-    return skyMilesNumber.length > 0 && password.length > 0;
+
+    if(skyMilesNumber.length > 0 && password.length > 0) {
+      document.getElementById("loginButton").style.background='#a90202';
+      return true;
+    }
+
+    return false;
   }
 
   function handleSubmit(event) {
 
-    alert({password});
+    event.preventDefault();
 
-    //event.preventDefault();
+    //alert(password);
+    //alert(skyMilesNumber);
+    changeMessage(skyMilesNumber);    
+
+    navigate("/ccice", {state:{customerId:skyMilesNumber}});
 
   }
+
+
+  const navigate = useNavigate();
+
+  
 
   return (
 
@@ -42,8 +66,6 @@ export default function Login() {
 
             type="text"
 
-            value={skyMilesNumber}
-
             onChange={(e) => setSkyMilesNumber(e.target.value)}
 
           />
@@ -58,8 +80,6 @@ export default function Login() {
 
             type="password"
 
-            value={password}
-
             onChange={(e) => setPassword(e.target.value)}
             //onChange={(e) => alert(password)}
 
@@ -67,8 +87,8 @@ export default function Login() {
 
         </Form.Group>
 
-        <Button className="loginButton" block size="lg" type="submit" disabled={!validateForm()}>
-
+        <Button id="loginButton" className="loginButton" block size="lg" type="submit" disabled={!validateForm()}>
+          
           Login
 
         </Button>

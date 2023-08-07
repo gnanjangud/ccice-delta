@@ -57,15 +57,30 @@ function NotFoundPage() {
 function App() {
 
 
+const [message, setMessage] = useState("Hello");
+
+const changeMessage = (newMessage) => {
+    //alert("from parent: " + newMessage);
+    setMessage(newMessage);
+}
+
+const [customerId, setCustomerId] = useState("");
+
+const setUpCustomerId = () => {
+    return setCustomerId("10001")
+}
+
 const [login, setLogin] = useState("");
 
 const fetchLogin = () => {
-    return setLogin("girish")
+    return setLogin("10004")
 }
 
 useEffect(() => {
     fetchLogin();
+    setUpCustomerId();
   }, "");
+
 
 
     return (
@@ -82,14 +97,19 @@ useEffect(() => {
                 </div>
                 <nav>
                 <h3>
-                    <Link to="/" style={{ textDecoration: 'none' }}><button>Home</button></Link>&nbsp;&nbsp;&nbsp;
-
-                    <Link to="/ccice" state={{ customerId: "" }} style={{ textDecoration: 'none' }}><button>CCICE</button></Link>&nbsp;&nbsp;&nbsp;
-                    
+                    <Link to="/" style={{ textDecoration: 'none' }}><button>Home</button></Link>&nbsp;&nbsp;&nbsp;                    
                     <Link to="/customers" style={{ textDecoration: 'none' }}><button>Customers</button></Link>&nbsp;&nbsp;&nbsp;
 
                     <Link to="/about" style={{ textDecoration: 'none' }}><button>About</button></Link>&nbsp;&nbsp;&nbsp;
-                    <Link to="/login" style={{ textDecoration: 'none' }}><button>Login</button></Link>
+
+                    {
+                    message == "Hello" ?
+
+                        <Link to="/login" style={{ textDecoration: 'none' }}><button>Login</button></Link> :
+
+<                       Link to="/ccice" state={{ customerId: message }} style={{ textDecoration: 'none' }}><button>{message}</button></Link>
+                    }                
+                    
                     
                 </h3>
                 </nav>
@@ -101,8 +121,8 @@ useEffect(() => {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/*" element={<NotFoundPage />} />
-                <Route path="/ccice" element={<CCICE />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/ccice" element={<CCICE changeMessage={changeMessage}/>} />
+                <Route path="/login" element={<Login changeMessage={changeMessage}/>} />
                 <Route path="/ccice/itineraryOffer" element= {<ItineraryOffer />}/>
                 <Route path="/customers" element= {<Customers />}/>
             </Routes>

@@ -54,9 +54,9 @@ function ItineraryOffer() {
 
 
                 <div>
-                    <table>
+                    <table >
                         <tr>
-                            <th style={{ width: "20%" }}>Itinerary Attirbute Name</th>
+                            <th>Itinerary Attirbute Name</th>
                             <th>Itinerary Attribute Value</th>
                         </tr>
                         {data.itinerary ? Object.entries(data.itinerary.itineraryOffers[0]).map(([key, value]) => (
@@ -80,10 +80,10 @@ function ItineraryOffer() {
                 </div>
                 : null}
 
-            <br></br>            
+            <br></br>         
+        
 
-            <br></br>
-        </div>
+            </div>
     );
 }
 

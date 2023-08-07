@@ -77,10 +77,10 @@ function Customers() {
     {data.itinerary ?         
 
     <div>
-    <table style={ {width: "100%" }}>
+    <table >
         <tr>
-        <th style={ {width: "15%" }}>Serial Number</th>
-        <th style={{ width: "20%" }}>Itinerary Offer ID</th>
+        <th >Serial Number</th>
+        <th >Itinerary Offer ID</th>
         <th>Customer Id</th>
         <th>Offered Date</th>
         <th>Number of Travellers</th>

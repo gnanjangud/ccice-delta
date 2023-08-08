@@ -8,12 +8,13 @@ import Button from "react-bootstrap/Button";
 import "./Style.css";
 
 import {
+    useNavigate,
     BrowserRouter,
     Route,
     Routes,
     Link,
     useLocation
-} from "react-router-dom";
+  } from "react-router-dom";
 
 function HomePage() {
     return (
@@ -54,6 +55,8 @@ function NotFoundPage() {
 }
 
 
+
+
 function App() {
 
 
@@ -82,7 +85,6 @@ useEffect(() => {
   }, "");
 
 
-
     return (
 
         <BrowserRouter>
@@ -97,18 +99,26 @@ useEffect(() => {
                 </div>
                 <nav>
                 <h3>
-                    <Link to="/" style={{ textDecoration: 'none' }}><button>Home</button></Link>&nbsp;&nbsp;&nbsp;                    
-                    <Link to="/customers" style={{ textDecoration: 'none' }}><button>Customers</button></Link>&nbsp;&nbsp;&nbsp;
+                    <Link to="/" style={{ textDecoration: 'none' }}><button>Home</button></Link>                 
+                    <Link to="/customers" style={{ textDecoration: 'none' }}><button>&nbsp;&nbsp;&nbsp;Customers</button></Link>
 
-                    <Link to="/about" style={{ textDecoration: 'none' }}><button>About</button></Link>&nbsp;&nbsp;&nbsp;
+                    <Link to="/about" style={{ textDecoration: 'none' }}><button>&nbsp;&nbsp;&nbsp;About</button></Link>
 
                     {
                     message == "Hello" ?
 
-                        <Link to="/login" style={{ textDecoration: 'none' }}><button>Login</button></Link> :
+                        <Link to="/login" style={{ textDecoration: 'none' }}><button>&nbsp;&nbsp;&nbsp;Login</button></Link> :
 
-<                       Link to="/ccice" state={{ customerId: message }} style={{ textDecoration: 'none' }}><button>{message}</button></Link>
-                    }                
+                        <Link to="/ccice" state={{ customerId: message }} style={{ textDecoration: 'none' }}><button>&nbsp;&nbsp;&nbsp;{message}</button></Link>
+                    }
+
+                    {
+                    message == "Hello" ?
+
+                        <p></p> :                        
+                    
+                    <Link to="/login" style={{ textDecoration: 'none' }}><button>&nbsp;&nbsp;&nbsp;Logout</button></Link>
+                    }                  
                     
                     
                 </h3>

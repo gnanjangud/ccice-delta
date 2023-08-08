@@ -106,7 +106,11 @@ function CCICE({changeMessage}) {
       </div> 
       : null }
 
-      <button onClick={ClickHandler}>Logout</button>      
+      {
+        //<button onClick={ClickHandler}>Logout</button>    
+      }
+
+        
 
       <br></br>
       <br></br>

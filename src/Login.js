@@ -15,6 +15,8 @@ import {
 
 export default function Login({changeMessage}) {  
 
+  changeMessage("Hello");
+
   const [email, setEmail] = useState("");
 
   const [skyMilesNumber, setSkyMilesNumber] = useState("");

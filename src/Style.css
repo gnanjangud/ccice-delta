@@ -70,9 +70,44 @@ table, tr, th, td{
 	margin-right: auto;
 	width: 50%;
 }
+.cciceTable {
+	color: #f8f7f6;
+	border: 0px solid rgb(9, 6, 17);
+	border-collapse: collapse;  
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+.cciceTableTr {
+	border: 0px solid rgb(9, 6, 17);
+}
+.cciceTableTd {
+	border: 0px solid rgb(9, 6, 17);
+}
+.cciceTableTh {
+	border: 0px solid rgb(9, 6, 17);
+}
+.cciceButton{
+	width: 150px;
+	height: 40px;
+	margin: 0px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #a90202;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-left: 10px;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
 input{
-	width: 300px;
-	height: 20px;
+	width: 273px;
+	height: 18px;
 	background: #e0dede;
 	justify-content: center;
 	display: flex;
@@ -80,7 +115,19 @@ input{
 	padding: 10px;
 	border: 1px solid rgb(10, 10, 38);
 	outline: black;
-	border-radius: 5px;
+	border-radius: 3px;
+}
+select{
+	width: 200px;
+	height: 40px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: 1px solid rgb(10, 10, 38);
+	outline: black;
+	border-radius: 3px;
 }
 button{
 	height: 40px;
@@ -94,7 +141,7 @@ button{
 	margin-top: 20px;
 	outline: none;
 	border: none;
-	border-radius: 5px;
+	border-radius: 3px;
 	transition: .2s ease-in;
 	cursor: pointer;
 	text-decoration: none;
@@ -115,7 +162,7 @@ button:hover{
 	margin-top: 20px;
 	outline: none;
 	border: none;
-	border-radius: 5px;
+	border-radius: 3px;
 	transition: .2s ease-in;
 	cursor: pointer;
 }

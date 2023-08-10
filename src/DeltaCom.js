@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CCICE from './CCICE';
 import Login from './Login';
 import ItineraryOffer from "./ItineraryOffer";
+import ItineraryOfferSummary from "./ItineraryOfferSummary";
 import Customers from "./Customers";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -134,6 +135,7 @@ useEffect(() => {
                 <Route path="/ccice" element={<CCICE changeMessage={changeMessage}/>} />
                 <Route path="/login" element={<Login changeMessage={changeMessage}/>} />
                 <Route path="/ccice/itineraryOffer" element= {<ItineraryOffer />}/>
+                <Route path="/ccice/itineraryOfferSummary" element= {<ItineraryOfferSummary />}/>
                 <Route path="/customers" element= {<Customers />}/>
             </Routes>
         </BrowserRouter>

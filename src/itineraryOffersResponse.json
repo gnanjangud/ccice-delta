@@ -4,6 +4,7 @@
             {
                 "itineraryOfferId": "20230718220935",
                 "customerId": "10004",
+                "type": "Business",
                 "travellers": [
                     {
                         "firstName": "Girish",

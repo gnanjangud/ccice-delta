@@ -235,7 +235,15 @@ function CCICE({ changeMessage }) {
                   <td>{i++}</td>
                   <td>
                     <nav>
-                      <Link to="/ccice/itineraryOffer" state={{ itineraryOfferId: itineraryOffer.itineraryOfferId }}>
+                      <Link to="/ccice/itineraryOffer" 
+                            state={
+                                { 
+                                    itineraryOfferQuery: {
+                                        customerId: itineraryOffer.customerId,
+                                        itineraryOfferId: itineraryOffer.itineraryOfferId 
+                                    }
+                                } 
+                            }>
                         {itineraryOffer.itineraryOfferId}
                       </Link>
                     </nav>

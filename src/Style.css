@@ -105,6 +105,24 @@ table, tr, th, td{
 	transition: .2s ease-in;
 	cursor: pointer;
 }
+.orderButton{
+	width: 150px;
+	height: 40px;
+	margin: 0px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #a90202;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-left: 10px;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
 input{
 	width: 273px;
 	height: 18px;

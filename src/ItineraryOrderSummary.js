@@ -9,15 +9,16 @@ import "./Style.css";
 import React, { useState, useEffect } from "react";
 
 
-function ItineraryOfferSummary() {
+function ItineraryOrderSummary() {
+
 
 
     const location = useLocation()
-    const { itineraryOfferQuery } = location.state
+    const { itineraryOrderQuery } = location.state
 
     //alert(itineraryOfferQuery.customerId)
 
-    const customerId = itineraryOfferQuery.customerId
+    const customerId = itineraryOrderQuery.customerId
 
     /* 
     const url = "https://w1zn5oqsa5.execute-api.us-west-2.amazonaws.com/dev/itineraryretrieve?retrieveByAttribute=itineraryOfferId&id="
@@ -27,11 +28,9 @@ function ItineraryOfferSummary() {
         */
     
     const url = "https://w1zn5oqsa5.execute-api.us-west-2.amazonaws.com/dev/itineraryengine?" 
-                + "&operation=" + "offer"
-                + "&customerId=" + itineraryOfferQuery.customerId 
-                + "&destination=" + itineraryOfferQuery.destination
-                + "&travelType=" + itineraryOfferQuery.travelType
-                + "&travelCompanion=" + itineraryOfferQuery.travelCompanion;
+                + "operation=" + "order"
+                + "&customerId=" + itineraryOrderQuery.customerId 
+                + "&itineraryOfferId=" + itineraryOrderQuery.itineraryOfferId;
 
     const [data, setData] = useState([]);
 
@@ -59,11 +58,11 @@ function ItineraryOfferSummary() {
 
             <br></br>
 
-            <h2>Itinerary Offer Summary</h2>
+            <h2>Itinerary Order Summary</h2>
 
             <br></br>
             
-            {data.itineraryOfferSummary ?
+            {data.itineraryOrderSummary ?
 
 
                 <div>
@@ -72,23 +71,22 @@ function ItineraryOfferSummary() {
                             <th>Itinerary Attirbute Name</th>
                             <th>Itinerary Attribute Value</th>
                         </tr>
-                        {data.itineraryOfferSummary ? Object.entries(data.itineraryOfferSummary).map(([key, value]) => (
+                        {data.itineraryOrderSummary ? Object.entries(data.itineraryOrderSummary).map(([key, value]) => (
 
                             <tr>
                                 <td><strong>{
                                     key.replace(/([a-z])([A-Z])/g, '$1 $2') 
                                 }:</strong></td>
                                 <td>{
-                                    key == "itineraryOfferId" ? 
-                                    <Link to="/ccice/itineraryOffer" 
-                                        state={
-                                            { 
-                                                itineraryOfferQuery: {
-                                                    customerId: customerId,
-                                                    itineraryOfferId: value 
-                                                }
-                                            } 
-                                        }>
+                                    key == "itineraryOrderId" ? 
+                                    <Link to="/ccice/itineraryOrder" state={
+                                        { 
+                                            itineraryOrderQuery: {
+                                                customerId: customerId,
+                                                itineraryOrderId: value 
+                                            }
+                                        } 
+                                    }>
                                     {value}
                                     </Link>
                                     : JSON.stringify(value)                                     
@@ -106,6 +104,8 @@ function ItineraryOfferSummary() {
 
             </div>
     );
+
 }
 
-export default ItineraryOfferSummary;
+
+export default ItineraryOrderSummary;

@@ -12,17 +12,17 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 
-function ItineraryOffer() {
+function ItineraryOrder() {
 
 
     const location = useLocation()
-    const { itineraryOfferQuery } = location.state
+    const { itineraryOrderQuery } = location.state
 
 
 
-    const url = "https://w1zn5oqsa5.execute-api.us-west-2.amazonaws.com/dev/itineraryretrieve?retrieveByAttribute=itineraryOfferId&id="
-        + itineraryOfferQuery.itineraryOfferId
-        + "&retrieveOperation=offer";
+    const url = "https://w1zn5oqsa5.execute-api.us-west-2.amazonaws.com/dev/itineraryretrieve?retrieveByAttribute=itineraryOrderId&id="
+        + itineraryOrderQuery.itineraryOrderId
+        + "&retrieveOperation=order";
     const [data, setData] = useState([]);
 
 
@@ -40,30 +40,7 @@ function ItineraryOffer() {
 
     const navigate = useNavigate();
 
-    function handleSubmit(event) {
-
-        event.preventDefault();
-
-        //alert(destination);
-        //alert(travelType);
-        //alert(travelCompanion);
-        //changeMessage(destination);    
-
-        //navigate("/ccice", {state:{destination:destination}});
-
-        navigate("/ccice/itineraryOrderSummary", {
-            state: {
-                itineraryOrderQuery: {
-                    customerId: itineraryOfferQuery.customerId,
-                    itineraryOfferId: itineraryOfferQuery.itineraryOfferId
-                }
-            }
-        });
-
-    }
-
-
-
+    
     return (
 
         <div className="App">
@@ -74,19 +51,6 @@ function ItineraryOffer() {
 
             <br></br>
             
-            <h3>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group size="lg" >
-
-                    <Button id="orderButton" className="orderButton" block size="lg" type="submit" >
-
-                        Create Order
-
-                    </Button>
-
-                </Form.Group>
-            </Form>
-            </h3>
 
             <h2>Itinerary Offer</h2>
 
@@ -101,7 +65,7 @@ function ItineraryOffer() {
                             <th>Itinerary Attirbute Name</th>
                             <th>Itinerary Attribute Value</th>
                         </tr>
-                        {data.itinerary ? Object.entries(data.itinerary.itineraryOffers[0]).map(([key, value]) => (
+                        {data.itinerary ? Object.entries(data.itinerary.itineraryOrders[0]).map(([key, value]) => (
 
                             <tr>
                                 <td><strong>{
@@ -129,4 +93,4 @@ function ItineraryOffer() {
     );
 }
 
-export default ItineraryOffer;
+export default ItineraryOrder;

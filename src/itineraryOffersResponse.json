@@ -11,23 +11,21 @@
                         "lastName": "Nanjangud",
                         "skyMilesNumber": "892347799",
                         "service": {
-                            "accomodation": {
-                                "hotels": [
-                                    {
-                                        "classOfService": "Business",
-                                        "fare": "40",
-                                        "itemNumber": "6",
-                                        "checkOutDateTime": "2023-10-11 11:00:00",
-                                        "address": "Harsonfield Airport South Atlanta 30354",
-                                        "checkInDateTime": "2023-10-11 15:00:00",
-                                        "name": "Marriot Courtyard",
-                                        "currency": "USD",
-                                        "tax": "8",
-                                        "hotelId": "724212",
-                                        "class": "4 Star"
-                                    }
-                                ]
-                            },
+                            "hotels": [
+                                {
+                                    "classOfService": "Business",
+                                    "fare": "40",
+                                    "itemNumber": "6",
+                                    "checkOutDateTime": "2023-10-11 11:00:00",
+                                    "address": "Harsonfield Airport South Atlanta 30354",
+                                    "checkInDateTime": "2023-10-11 15:00:00",
+                                    "name": "Marriot Courtyard",
+                                    "currency": "USD",
+                                    "tax": "8",
+                                    "hotelId": "724212",
+                                    "class": "4 Star"
+                                }
+                            ],
                             "activites": [
                                 {
                                     "activityId": "2836723",

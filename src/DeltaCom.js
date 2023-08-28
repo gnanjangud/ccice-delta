@@ -6,6 +6,8 @@ import ItineraryOfferSummary from "./ItineraryOfferSummary";
 import Customers from "./Customers";
 import ItineraryOrderSummary from "./ItineraryOrderSummary";
 import ItineraryOrder from "./ItineraryOrder";
+import ItineraryOffers from "./ItineraryOffers";
+import ItineraryOrders from "./ItineraryOrders";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./Style.css";
@@ -141,6 +143,8 @@ useEffect(() => {
                 <Route path="/customers" element= {<Customers />}/>
                 <Route path="/ccice/itineraryOrderSummary" element= {<ItineraryOrderSummary />}/>
                 <Route path="/ccice/itineraryOrder" element= {<ItineraryOrder />}/>
+                <Route path="/ccice/itineraryOffers" element= {<ItineraryOffers />}/>
+                <Route path="/ccice/itineraryOrders" element= {<ItineraryOrders />}/>
             </Routes>
         </BrowserRouter>
     );

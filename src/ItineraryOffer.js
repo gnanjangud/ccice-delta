@@ -112,7 +112,124 @@ function ItineraryOffer() {
                                         <Link to="/ccice" state={ { customerId: value }}>
                                             {value}
                                         </Link>
-                                        : JSON.stringify(value)
+                                        : key == "travellers" ? 
+                                        value.map(
+                                            (traveller) => (
+                                                
+                                                <div>
+                                                <table className="childTable">
+                                                    <tr>
+                                                        <th className="childTableTh">First Name</th>
+                                                        <th>Last Name</th>
+                                                        <th>Email</th>
+                                                        <th>DOB</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>{traveller.firstName}</td>
+                                                        <td>{traveller.lastName}</td>
+                                                        <td>{traveller.email}</td>
+                                                        <td>{traveller.dateOfBirth}</td>
+                                                    </tr>
+                                                </table>
+                                                <br></br>
+                                                <table className="childTable">
+                                                    <tr>
+                                                        <th>Hotel Name</th>
+                                                        <th>City</th>
+                                                        <th>Checkin</th>
+                                                        <th>Checkout</th>
+                                                        <th>Price</th>
+                                                    </tr>
+                                                    {
+                                                        traveller.service.hotels.map(
+                                                            (hotel) => (
+                                                                
+                                                                    <tr>
+                                                                        <td>{hotel.name}</td>
+                                                                        <td>{hotel.city}</td>
+                                                                        <td>{hotel.email}</td>
+                                                                        <td>{hotel.dateOfBirth}</td>
+                                                                    </tr>
+                                                            )
+                                                        )
+                                                    }
+                                                </table>
+                                                <br></br>
+                                                <table className="childTable">
+                                                    <tr>
+                                                        <th>Flight Number</th>
+                                                        <th>Departure Airport</th>
+                                                        <th>Departure DateTime</th>
+                                                        <th>Arrival Airport</th>
+                                                        <th>Arrival DateTime</th>
+                                                    </tr>
+                                                    {
+                                                        traveller.service.transportation.flights.map(
+                                                            (flight) => (
+                                                                
+                                                                    <tr>
+                                                                        <td>{flight.flightNumber}</td>
+                                                                        <td>{flight.departureAirport}</td>
+                                                                        <td>{flight.departureTime}</td>
+                                                                        <td>{flight.arrivalAirport}</td>
+                                                                        <td>{flight.arrivalTime}</td>
+                                                                    </tr>
+                                                            )
+                                                        )
+                                                    }
+                                                </table>
+                                                <br></br>
+                                                <table className="childTable">
+                                                    <tr>
+                                                        <th>Service Provider</th>
+                                                        <th>Pickup Location</th>
+                                                        <th>Pickup DateTime</th>
+                                                        <th>Dropoff Location</th>
+                                                        <th>Dropoff DateTime</th>
+                                                    </tr>
+                                                    {
+                                                        traveller.service.transportation.cabServices.map(
+                                                            (cabService) => (
+                                                                
+                                                                    <tr>
+                                                                        <td>{cabService.serviceProvider}</td>
+                                                                        <td>{cabService.pickUpLocation}</td>
+                                                                        <td>{cabService.pickUpDateTime}</td>
+                                                                        <td>{cabService.dropOffLocation}</td>
+                                                                        <td>{cabService.dropOffDateTime}</td>
+                                                                    </tr>
+                                                            )
+                                                        )
+                                                    }
+                                                </table>
+                                                <br></br>
+                                                <table className="childTable">
+                                                    <tr>
+                                                        <th>Service Provider</th>
+                                                        <th>Pickup Location</th>
+                                                        <th>Pickup DateTime</th>
+                                                        <th>Dropoff Location</th>
+                                                        <th>Dropoff DateTime</th>
+                                                    </tr>
+                                                    {
+                                                        traveller.service.transportation.carRentals.map(
+                                                            (carRental) => (
+                                                                
+                                                                    <tr>
+                                                                        <td>{carRental.serviceProvider}</td>
+                                                                        <td>{carRental.pickUpLocation}</td>
+                                                                        <td>{carRental.pickUpDateTime}</td>
+                                                                        <td>{carRental.dropOffLocation}</td>
+                                                                        <td>{carRental.dropOffDateTime}</td>
+                                                                    </tr>
+                                                            )
+                                                        )
+                                                    }
+                                                </table>
+                                                </div>
+                                            )
+                                        )
+                                        :value
                                 }
                                 </td>
                             </tr>

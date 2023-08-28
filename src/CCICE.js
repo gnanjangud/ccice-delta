@@ -29,12 +29,19 @@ function CCICE({ changeMessage }) {
     + "&retrieveOperation=offer";
   const [data, setData] = useState([]);
 
-  const fetchInfo = () => {
-    return fetch(url)
-      .then((res) => res.json())
-      .then((d) => setData(d))
+  const fetchInfo = async () => {
+    const res = await fetch(url);
+    const d = await res.json();
+    return setData(d);
   }
 
+  /*
+      const fetchInfo = () => {
+      return fetch(url)
+        .then((res) => res.json())
+        .then((d) => setData(d))
+    }
+  */
 
   useEffect(() => {
     fetchInfo();
@@ -67,6 +74,30 @@ function CCICE({ changeMessage }) {
     });
 
   }
+
+  function viewOffers(event) {
+
+    event.preventDefault();
+
+    navigate("/ccice/itineraryOffers", {
+        state: {
+                customerId: customerId
+        }
+    });
+
+}
+
+function viewOrders(event) {
+
+  event.preventDefault();
+
+  navigate("/ccice/itineraryOrders", {
+      state: {
+              customerId: customerId
+      }
+  });
+
+}
 
   function validateForm() {
 
@@ -212,58 +243,40 @@ function CCICE({ changeMessage }) {
 
       <br></br>
 
-      <h2>Offered Itineraries</h2>
+      <table class="cciceButtonTable">
+        <tr class="cciceButtonTableTr">
+          <td class="cciceButtonTableTd">
+          <h3>
+            <Form onSubmit={viewOffers}>
+                <Form.Group size="lg" >
 
-      {/*data.itinerary ? Object.keys(data.itinerary)[0].replace(/([a-z])([A-Z])/g, '$1 $2') : null*/}
+                    <Button id="orderButton" className="orderButton" block size="lg" type="submit" >
 
-      {data.itinerary ?
+                        View Offers
 
-        <div>
-          <table  >
-            <tr>
-              <th>Serial Number</th>
-              <th>Itinerary Offer ID</th>
-              <th>Customer Id</th>
-              <th>Offered Date</th>
-              <th>Number of Travellers</th>
-            </tr>
+                    </Button>
 
-            {data.itinerary ? data.itinerary.itineraryOffers.map((itineraryOffer, index) => {
-              return (
+                </Form.Group>
+            </Form>
+            </h3>
+          </td>
+          <td class="cciceButtonTableTd">
+          <h3>
+            <Form onSubmit={viewOrders}>
+                <Form.Group size="lg" >
 
-                <tr>
-                  <td>{i++}</td>
-                  <td>
-                    <nav>
-                      <Link to="/ccice/itineraryOffer" 
-                            state={
-                                { 
-                                    itineraryOfferQuery: {
-                                        customerId: itineraryOffer.customerId,
-                                        itineraryOfferId: itineraryOffer.itineraryOfferId 
-                                    }
-                                } 
-                            }>
-                        {itineraryOffer.itineraryOfferId}
-                      </Link>
-                    </nav>
-                  </td>
-                  <td>{itineraryOffer.customerId}</td>
-                  <td>{itineraryOffer.itineraryOfferUpdateDatetime}</td>
-                  <td>{Object.keys(itineraryOffer.travellers).length}</td>
-                </tr>
-              );
-            }) : null}
+                    <Button id="orderButton" className="orderButton" block size="lg" type="submit" >
 
-          </table>
-        </div>
-        : null}
+                        View Orders
 
-      {
-        //<button onClick={ClickHandler}>Logout</button>    
-      }
+                    </Button>
 
-
+                </Form.Group>
+            </Form>
+            </h3>
+          </td>
+        </tr>
+      </table>
 
       <br></br>
       <br></br>

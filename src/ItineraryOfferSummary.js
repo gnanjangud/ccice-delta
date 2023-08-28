@@ -42,6 +42,14 @@ function ItineraryOfferSummary() {
             .then((d) => setData(d))
     }
 
+    /*
+    const fetchInfo = () => {
+        return fetch(url)
+            .then((res) => res.json())
+            .then((d) => setData(d))
+    }
+    */
+
 
     useEffect(() => {
         fetchInfo();

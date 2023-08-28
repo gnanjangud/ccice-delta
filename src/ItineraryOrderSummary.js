@@ -89,7 +89,7 @@ function ItineraryOrderSummary() {
                                     }>
                                     {value}
                                     </Link>
-                                    : JSON.stringify(value)                                     
+                                    : value                                     
                                     }
                                 </td>
                             </tr>

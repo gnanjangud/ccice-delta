@@ -87,6 +87,40 @@ table, tr, th, td{
 .cciceTableTh {
 	border: 0px solid rgb(9, 6, 17);
 }
+.childTable {
+	color: #1f2181;
+	border: 0px solid rgb(8, 8, 134);
+	border-collapse: collapse;  
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+.childTableTr {
+	border: 1px solid rgb(34, 40, 204);
+}
+.childTableTh {
+	border: 1px solid rgb(9, 6, 17);
+}
+.childTableTd {
+	border: 0px solid rgb(20, 173, 58);
+}
+.cciceButtonTable {
+	color: #f8f7f6;
+	border: 0px solid #f8f7f6;
+	border-collapse: collapse;  
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+}
+.cciceButtonTableTr {
+	border: 0px solid #f8f7f6;
+}
+.cciceButtonTableTh {
+	border: 0px solid #f8f7f6;
+}
+.cciceButtonTableTd {
+	border: 0px solid #f8f7f6;
+}
 .cciceButton{
 	width: 150px;
 	height: 40px;

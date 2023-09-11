@@ -249,10 +249,13 @@ button:hover{
 	display: flex;
 }
 
-.itineraryImage {
+.itineraryImageSuperWide {
 	width: 1500px;
 }
 
+.itineraryImage {
+	width: 1500px;
+}
   .floatingBlock {
 	  background-color: #fff;
 	  padding: 10px;

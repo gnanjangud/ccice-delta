@@ -14,6 +14,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./Style.css";
 
+import wideScreen from "./Itineraries/wide-screen-grey.png";
+
 import {
     useNavigate,
     BrowserRouter,
@@ -132,6 +134,10 @@ useEffect(() => {
                 </nav>
 
             </header>
+
+
+            <img className="itineraryImage" src={wideScreen} alt={"Itinerary"}/>
+
             </div>
 
             <Routes>

@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import CCICE from './CCICE';
 import Login from './Login';
 import ItineraryOffer from "./ItineraryOffer";
+import ItineraryOfferNew from "./ItineraryOfferNew";
 import ItineraryOfferSummary from "./ItineraryOfferSummary";
 import Customers from "./Customers";
 import ItineraryOrderSummary from "./ItineraryOrderSummary";
 import ItineraryOrder from "./ItineraryOrder";
 import ItineraryOffers from "./ItineraryOffers";
 import ItineraryOrders from "./ItineraryOrders";
+import ItineraryEngine from "./ItineraryEngine";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./Style.css";
@@ -145,6 +147,8 @@ useEffect(() => {
                 <Route path="/ccice/itineraryOrder" element= {<ItineraryOrder />}/>
                 <Route path="/ccice/itineraryOffers" element= {<ItineraryOffers />}/>
                 <Route path="/ccice/itineraryOrders" element= {<ItineraryOrders />}/>
+                <Route path="/ccice/itineraryOfferNew" element= {<ItineraryOfferNew />}/>
+                <Route path="/ccice/itineraryEngine" element= {<ItineraryEngine />}/>
             </Routes>
         </BrowserRouter>
     );

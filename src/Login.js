@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 
 import Button from "react-bootstrap/Button";
+import wideScreen from "./Itineraries/wide-screen-grey.png";
 
 import {
   useNavigate,
@@ -96,6 +97,9 @@ export default function Login({changeMessage}) {
         </Button>
 
       </Form>
+
+
+    <img className="itineraryImage" src={wideScreen} alt={"Itinerary"}/>
 
     </div>
 

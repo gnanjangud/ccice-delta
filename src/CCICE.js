@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import wideScreen from "./Itineraries/wide-screen-grey.png";
 import "./Style.css";
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
@@ -55,6 +56,7 @@ function CCICE({ changeMessage }) {
 
     event.preventDefault();
 
+    
     //alert(destination);
     //alert(travelType);
     //alert(travelCompanion);
@@ -62,9 +64,25 @@ function CCICE({ changeMessage }) {
 
     //navigate("/ccice", {state:{destination:destination}});
 
+    /*
+
     navigate("/ccice/itineraryOfferSummary", {
       state: {
         itineraryOfferQuery: {
+        customerId: customerId,
+        destination: destination,
+        travelType: travelType,
+        travelCompanion: travelCompanion
+        }
+      }
+    });
+
+    */
+
+
+    navigate("/ccice/itineraryEngine", {
+      state: {
+        itineraryEngineQuery: {
         customerId: customerId,
         destination: destination,
         travelType: travelType,
@@ -303,6 +321,8 @@ function viewOrders(event) {
         }) : null
         */
       }
+
+    <img className="itineraryImage" src={wideScreen} alt={"Itinerary"}/>
 
     </div>
   );

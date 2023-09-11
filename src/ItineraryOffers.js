@@ -10,6 +10,7 @@ import {
   import "./Style.css";
   import { useNavigate } from "react-router-dom";
   import React, { useState, useEffect } from "react";
+  import cdgItinerary from "./Itineraries/ATL-CDG-2.png";
 import ItineraryOffer from "./ItineraryOffer";
   
   
@@ -55,7 +56,10 @@ import ItineraryOffer from "./ItineraryOffer";
   
         <br></br>
   
-        <h2>Customer Centric Itinerary Creation Engine</h2>  
+        <h2>Customer Centric Itinerary Engine</h2>  
+
+
+        <img className="itineraryImage" src={cdgItinerary} alt={"test"}/>
         
         <br></br>
   
@@ -82,7 +86,7 @@ import ItineraryOffer from "./ItineraryOffer";
                     <td>{i++}</td>
                     <td>
                       <nav>
-                        <Link to="/ccice/itineraryOffer" 
+                        <Link to="/ccice/itineraryOfferNew" 
                               state={
                                   { 
                                       itineraryOfferQuery: {
